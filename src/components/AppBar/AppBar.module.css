@@ -1,7 +1,5 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #2a363b;
+.container {
+  background-color: rgba(18, 18, 18, 1);
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
 }

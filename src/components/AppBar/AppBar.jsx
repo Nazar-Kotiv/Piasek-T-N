@@ -1,24 +1,21 @@
-import Navigation from "../Navigation/Navigation";
-import UserMenu from "../UserMenu/UserMenu";
-import AuthNav from "../AuthNav/AuthNav";
+import Logo from "../Logo/Logo";
+import CreateTask from "../CreateTask/CreateTask";
+import ProjectOffice from "../ProjectOffice/ProjectOffice";
+import NeonLightProject from "../NeonLightProject/NeonLightProject";
+import HelpBlock from "../HelpBlock/HelpBlock";
+import Logout from "../Logout/Logout";
+
 import css from "./AppBar.module.css";
 
-import { Toaster } from "react-hot-toast";
-import { useSelector } from "react-redux";
-import {
-  selectIsLoggedIn,
-  selectIsRefreshing,
-} from "../../redux/auth/selectors";
-
 export default function AppBar() {
-  const isLoggedIn = useSelector(selectIsLoggedIn);
-  const isRefreshing = useSelector(selectIsRefreshing);
-
   return (
-    <header className={css.header}>
-      <Navigation />
-      {!isRefreshing && <div>{isLoggedIn ? <UserMenu /> : <AuthNav />}</div>}
-      <Toaster />
-    </header>
+    <div className={css.container}>
+      <Logo />
+      <CreateTask />
+      <ProjectOffice />
+      <NeonLightProject />
+      <HelpBlock />
+      <Logout />
+    </div>
   );
 }
